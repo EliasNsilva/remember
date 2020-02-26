@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+
+
+    <!-- Código com o básico de JS: ler e salvar dados, e fazer um pequeno tratamento deles-->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge"> <!--Compatibilidade, fire fox e EDGE-->
+    <title>Teste</title>
+    <style>
+        body {
+            background-color: rgb(17, 70, 2);/* cor de fundo*/
+            color: rgb(0, 102, 255);
+            font: normal 30pt Arial;
+        }
+
+        h1 {
+            color: rgb(54, 32, 151);/*mudando o stilo de h1*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1> <!-- cria um titulo -->
+    <p>Vamo lá!</p> <!-- cria um paragrafo -->
+    <script>
+
+        window.alert('OPA!')
+
+        var confirn = window.confirm('Muito spam!')
+
+        var nome = window.prompt('Qual seu nome?')// retorna uma string 
+        window.alert('Iae, ' +nome+ '!')
+        //(number + number) == soma
+        //(strin + string) == concatenação
+
+        var idade = window.prompt('Qual sua idade?')
+        String(idade)// passando para string
+        Number(idade)//convertendo para number, sem especificar tipo
+        
+        document.write(`${nome} você tem ${idade} anos de idade<br>`)//concatenado variaveis a string, lembrar de usar `algo`.
+        
+        document.write(`Seu nome tem ${nome.length} letras<br>`) //nome.length retona tamanho da string
+
+        document.write(`Tudo maiúsculo ${nome.toUpperCase()}<br>`)//todas letras maiúsculas
+
+        document.write(`Tudo minúsculo ${nome.toLowerCase()} <br>`)//todas minusculas
+
+        var salario = window.prompt('Qual seu salario ?')
+
+        salario.toFixed(2)//limitando número de casas decimais
+        salario.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})//numero com notação de real
+
+
+    </script>
+</body>
+</html>
